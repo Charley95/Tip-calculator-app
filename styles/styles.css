@@ -95,6 +95,16 @@ label, .select-tip {
     background-color: var(--Green-900);
     padding: 2.4rem;
     height: 25.7rem;
+    display: flex;
+    flex-direction: column;
+}
+.results-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.tip-figure, .total-figure {
+    height: 4.7rem;
 }
 .reset-btn {
     width: 100%;
