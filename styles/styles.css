@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     font-size: 62.5%;
     height: 100%;
@@ -11,19 +12,19 @@ html {
 
 :root {
     /* Colors */
---Green-400: hsl(172, 67%, 45%);
---Green-900: hsl(183, 100%, 15%);
---Grey--550: hsl(180, 18%, 40%);
---Grey-500: hsl(186, 14%, 43%);
---Grey-400: hsl(184, 14%, 56%);
---Grey-200: hsl(185, 41%, 84%);
---Grey-50: hsl(189, 47%, 97%);
---White: hsl(0, 100%, 100%);
---orange-400: hsl(13, 70%, 60%);
-
+    --Green-400: hsl(172, 67%, 45%);
+    --Green-900: hsl(183, 100%, 15%);
+    --Grey--550: hsl(180, 18%, 40%);
+    --Grey-500: hsl(186, 14%, 43%);
+    --Grey-400: hsl(184, 14%, 56%);
+    --Grey-200: hsl(185, 41%, 84%);
+    --Grey-50: hsl(189, 47%, 97%);
+    --White: hsl(0, 100%, 100%);
+    --orange-400: hsl(13, 70%, 60%);
 }
+
 body {
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     background-color: var(--Grey-200);
     height: 100%;
     display: flex;
@@ -38,27 +39,38 @@ body {
     flex-direction: column;
     border-radius: 20px 20px 0 0;
 }
+
 .logo {
     display: block;
     margin: 4rem auto;
 }
-label, .select-tip {
+
+label,
+.select-tip {
     font-size: 1.6rem;
     color: var(--Grey-500);
+    font-weight: bold;
 }
-.bill-header, .people-container {
+
+.bill-header,
+.people-container {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
 }
+
 .percentage {
     background-color: var(--Green-900);
     color: var(--White);
 }
+
 .custom-input {
     background-color: var(--Grey-50);
     color: var(--Grey-550);
+    text-align: center;
 }
-.percentage, .custom-input{
+
+.percentage,
+.custom-input {
     height: 4.8rem;
     width: 100%;
     padding: 0.8rem 1.6rem;
@@ -66,21 +78,24 @@ label, .select-tip {
     font-size: 2.4rem;
     border-style: none;
 }
-.tip.selection-container {
+
+.tip-selection-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1.6rem;
     justify-content: space-between;
-} 
+}
+
 .tip-options-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.6rem;
     margin-bottom: 3.2rem;
     margin-top: 0.8rem;
-    
 }
-#bill-amount, #no-of-people {
+
+#bill-amount,
+#no-of-people {
     width: 100%;
     height: 4.8rem;
     padding: 0.6rem 1.8rem;
@@ -90,6 +105,7 @@ label, .select-tip {
     border-radius: 5px;
     /* border-style: none; */
 }
+
 .results-container {
     border-radius: 1.5rem;
     background-color: var(--Green-900);
@@ -98,14 +114,42 @@ label, .select-tip {
     display: flex;
     flex-direction: column;
 }
+
 .results-content {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
-.tip-figure, .total-figure {
-    height: 4.7rem;
+.tip-amount-row, .total-amount-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.4rem;
 }
+
+.tip-figure,
+.total-figure {
+    height: 4.7rem;
+    color: var(--Green-400);
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+.dollar {
+    fill: var(--Green-400);
+}
+
+.tip-amount>p:first-of-type,           /* This rule selects the first paragraph element in the divs*/
+.total-amount>p:first-of-type {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.tip-amount>p:last-of-type,           /* This rule selects the last paragraph element in the divs*/
+.total-amount>p:last-of-type {
+    font-size: 1.3rem;
+    color: var(--Grey-400);
+}
+
 .reset-btn {
     width: 100%;
     height: 4.8rem;
